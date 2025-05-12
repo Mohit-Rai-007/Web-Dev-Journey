@@ -1,0 +1,20 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+h1{
+    background-color: black;
+    color: aqua;
+}
+div{
+    background-color: rgb(7, 60, 101);
+    color: white;
+}
+.class{
+    background-color: black;
+    color: aqua;
+}
+ #class{
+    background-color: greenyellow;
+    color: black;
+ }

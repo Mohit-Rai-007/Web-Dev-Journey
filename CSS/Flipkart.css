@@ -1,0 +1,48 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.card {
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 4px 4px 4px 4px gray;
+    padding: 24px 0px 30px 24px;
+}
+
+.card-description .star {
+    background-color: green;
+    color: white;
+    padding: 2px 4px 2px 6px;
+    border-radius: 5px;
+}
+
+.card-description .Ratings {
+    color: gray;
+}
+
+.card-image {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card-description {
+    /* padding-left: 25px; */
+    /* text-align: left; */
+    margin-right: 20%;
+}
+.card-description ul {
+    list-style-position: outside;
+    padding-left: 20px; /* or more if needed */
+}
+.card-description .title {
+    font-size: 20px;
+    font-weight: bold;
+    height: 30px;
+    color: #2874F0;
+}
+.card-price .price{
+    font-size: 25px;
+    font-weight: bold;
+    height: 30px;
+}
