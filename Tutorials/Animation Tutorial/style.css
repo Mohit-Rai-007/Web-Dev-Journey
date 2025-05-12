@@ -49,4 +49,23 @@ body{
 .image-part{
     height: 700px;
     width: 604px;
+    /* border: 3px solid yellow; */
+    /* position: relative; */
+}
+.image-part .circle{
+    height: 600px;
+    width: 600px;
+    background-color: #D09630;
+    border-radius: 50%;
+    /* border: 3px solid blue; */
+    position: absolute;
+    top: 22%;
+}
+.image-part .image{
+    /* border: 3px solid purple; */
+    height: 700px;
+    width: auto;
+    background-size: cover;
+    background-image: url(https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/3b51555cfc1f5bf58c84e059/x-min.png);
+    position: relative;
 }
