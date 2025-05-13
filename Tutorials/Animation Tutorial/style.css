@@ -31,6 +31,54 @@ body{
     height: 600px;
     padding-left: 100px;
     padding-top: 60px;
+    animation-name: text-slide;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+@keyframes text-slide {
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+.image-part .image{
+    animation-name: hero-slide;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+@keyframes hero-slide {
+    from{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+.image-part .circle{
+    transform: scale(0);
+    animation-name: circle-slide;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+@keyframes circle-slide {
+    from{
+        transform: scale(0);
+        
+    }
+    to{
+        transform: scale(1);
+    }
 }
 .text-part h2{
     height: 132px;
