@@ -11,7 +11,8 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background: linear-gradient(45deg, #2c3e50, #3498db);
+        background: #020024;
+        background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 36%, rgba(0, 212, 255, 1) 100%);
         margin: 0;
         font-family: Arial, sans-serif;
     }
@@ -38,14 +39,14 @@
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     }
     .min-hand{
-        width: 150px;
+        width: 140px;
         height: 6px;
         position: absolute;
         background-color: #2c3e50;
         top: 50%;
         left: 50%;
-        transform-origin: 0%;
-        animation: minute 18s infinite linear;
+        transform-origin: 0%; 
+        animation: minute 80s infinite linear;
         border-radius: 6px;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     }
@@ -57,7 +58,7 @@
         top: 50%;
         left: 50%;
         transform-origin: 0%;
-        animation: second 80s infinite linear;
+        animation: second 18s infinite linear;
         border-radius: 3px;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     }
@@ -73,14 +74,25 @@
         border-radius: 8px;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     }
-    .name{
-        position: absolute;
-        top: 20%;
-        left: 41%;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
+    .name {
+    position: absolute;
+    top: 20%;
+    left: 41%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;              /* Change text color */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);  /* Add shadow effect */
+    letter-spacing: 3px;         /* Space between letters */
+    transition: all 0.3s ease;   /* Smooth transitions */
+}
+
+
+.name:hover {
+    transform: scale(1.1) rotate(0deg);
+   
+    color: #172d43;
+}
     span{
         font-size: 32px;
         font-weight: bold;
