@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(45deg, #2c3e50, #3498db);
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    .Clock{
+        width: 380px;
+        height: 380px;
+        border: 8px solid #ecf0f1;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4),
+                    inset 0px 0px 15px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(145deg, #f1f3f6, #d3d8e1);
+        border-radius: 50%;
+        position: relative;
+    }
+    .center{
+        background-color: #e74c3c;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 10;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    .min-hand{
+        width: 150px;
+        height: 6px;
+        position: absolute;
+        background-color: #2c3e50;
+        top: 50%;
+        left: 50%;
+        transform-origin: 0%;
+        animation: minute 18s infinite linear;
+        border-radius: 6px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    .sec-hand{
+        width: 160px;
+        height: 3px;
+        position: absolute;
+        background-color: #e74c3c;
+        top: 50%;
+        left: 50%;
+        transform-origin: 0%;
+        animation: second 80s infinite linear;
+        border-radius: 3px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .hour-hand{
+        width: 100px;
+        height: 8px;
+        position: absolute;
+        background-color: #34495e;
+        top: 50%;
+        left: 50%;
+        transform-origin: 0%;
+        animation: hour 200s infinite linear;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    .name{
+        position: absolute;
+        top: 20%;
+        left: 41%;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    span{
+        font-size: 32px;
+        font-weight: bold;
+        position: absolute;
+        color: #34495e;
+    }
+    .three{
+        left: 93%;
+        top: 43%;
+    }
+    .nine{
+        right: 93%;
+        top: 43%;
+    }
+    .twelve{
+        top: 1%;
+        left: 44%;
+    }
+    .six{
+        top: 88%;
+        left: 48%;
+    }
+    .one{
+        top: 6%;
+        left: 70%;
+    }
+    .two{
+        top: 21%;
+        left: 86%;
+    }
+    .four{
+        top: 65%;
+        left: 86%;
+    }
+    .five{
+        top: 82%;
+        left: 70%;
+    }
+    .seven{
+        top: 82%;
+        right: 70%;
+    }
+    .eight{
+        top: 65%;
+        right: 86%;
+    }
+    .ten{
+        top: 21%;
+        right: 82%;
+    }
+    .eleven{
+        top: 6%;
+        right: 68%;
+    }
+    @keyframes minute{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes second{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes hour{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<body>
+    <div class="Clock">
+        <div class="center"></div>
+        <div class="min-hand"></div>
+        <div class="sec-hand"></div>
+        <div class="hour-hand"></div>
+        <div class="name">MOHIT</div>
+        <span class="one">1</span>
+        <span class="two">2</span>
+        <span class="three">3</span>
+        <span class="four">4</span>
+        <span class="five">5</span>
+        <span class="six">6</span>
+        <span class="seven">7</span>
+        <span class="eight">8</span>
+        <span class="nine">9</span>
+        <span class="ten">10</span>
+        <span class="eleven">11</span>
+        <span class="twelve">12</span>
+    </div>
+</body>
+</html>
