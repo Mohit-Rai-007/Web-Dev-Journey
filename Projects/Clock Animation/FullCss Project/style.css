@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 .header {
     display: flex;
     justify-content: space-between;
@@ -30,20 +29,6 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 40vw;
 }
-
-@media screen and (max-width:860px) {
-            .nav-items ul{
-                display: flex;
-                gap:px;
-                width: 50vw;
-            }
-        }
-
-        @media screen and (max-width:600px) {
-            .nav-items{
-                display: none;
-            }
-        }
 
 .main {
     display: flex;
@@ -82,7 +67,8 @@
 
 .content p {
     font-size: 22px;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     margin-top: 30px;
 }
 
@@ -130,4 +116,37 @@
     background: linear-gradient(to right, rgb(249, 126, 131), rgb(225, 54, 144));
     border-radius: 50%;
     margin-top: 100px;
+}
+
+
+@media screen and (max-width:980px) {
+            .nav-items{
+                display: none;
+            }
+        }
+
+@media screen and (max-width: 980px) {
+    .content {
+        /* margin-left: 5%; */
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .content span {
+        margin-left: 0%;
+        font-size: 45px;
+        
+    }
+    
+    .content p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .main {
+        flex-direction: column;
+        align-items: center;
+        height: 1026px;
+    }
 }
