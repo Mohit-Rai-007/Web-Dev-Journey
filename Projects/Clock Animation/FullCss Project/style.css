@@ -50,12 +50,12 @@ body{
 
 /* CSS for landing page section starts here */
 
-.landing-page-container {
+/* .landing-page-container {
     position: relative;
     overflow: hidden;
     background: #E23890;
     background: linear-gradient(87deg, rgba(226, 56, 144, 1) 13%, rgba(246, 117, 132, 1) 55%);
-}
+} */
 
 .landing-page-section {
     display: flex;
@@ -176,6 +176,7 @@ body{
     /* border: 3px solid red; */
     background: #E23890;
     background: linear-gradient(87deg, rgba(226, 56, 144, 1) 13%, rgba(246, 117, 132, 1) 55%);
+
 }
 
 .heading-part{
@@ -221,6 +222,65 @@ body{
 }
 .box p{
     margin-top: 20px;
+}
+
+#box1{
+    /* transform: (0); */
+   animation-name: box1-slide;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out; 
+}
+@keyframes box1-slide {
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+#box2{
+    transform: scale(0);
+   animation-name: box2-slide;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out; 
+}
+@keyframes box2-slide {
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#box3{
+   animation-name: box3-slide;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out; 
+}
+@keyframes box3-slide {
+    from{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
 }
 
 
