@@ -3,7 +3,10 @@
     padding: 0%;
     box-sizing: border-box;
 }
-
+body{
+    background: #E23890;
+    background: linear-gradient(87deg, rgba(226, 56, 144, 1) 13%, rgba(246, 117, 132, 1) 55%);
+}
 .header {
     display: flex;
     justify-content: space-between;
@@ -170,9 +173,56 @@
 /* CSS for learning section Starts here */
 
 .Learning {
+    /* border: 3px solid red; */
     background: #E23890;
     background: linear-gradient(87deg, rgba(226, 56, 144, 1) 13%, rgba(246, 117, 132, 1) 55%);
 }
+
+.heading-part{
+    /* border: 3px solid blue; */
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 2px;
+    padding: 15px;
+    margin: 25px;
+}
+
+.grid-part{
+    /* border: 3px solid green; */
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    row-gap: 4%;
+    /* column-gap: 10%; */
+    justify-content: center;
+    justify-items: center;
+    /* position: relative; */
+
+}
+.grid-part .box{
+    /* border: 4px solid black; */
+    height: 250px;
+    width: 350px;
+    position: relative;
+    color: #FFFFFF;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.box h1{
+    display: inline;
+    font-size: 3.5rem;
+}
+.box h2{
+    display: inline;
+    position: absolute;
+    top: 12%;
+    left: 30%;
+}
+.box p{
+    margin-top: 20px;
+}
+
 
 @media screen and (max-width:980px) {
     .nav-items {
