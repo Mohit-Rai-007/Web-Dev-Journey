@@ -28,6 +28,7 @@
     color: rgb(225, 54, 144);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 40vw;
+    text-decoration: none;
 }
 
 .hamburger {
@@ -38,21 +39,34 @@
 
 .header .hamburger i {
     font-size: 35px;
-    color: white;
+    color: black;
     padding: 10px;
     padding-top: 50px;
 }
 
-.main {
+
+/* CSS for landing page section starts here */
+
+.landing-page-container {
+    position: relative;
+    overflow: hidden;
+    background: #E23890;
+    background: linear-gradient(87deg, rgba(226, 56, 144, 1) 13%, rgba(246, 117, 132, 1) 55%);
+}
+
+.landing-page-section {
     display: flex;
-    background-color: rgb(0, 0, 0);
+    /* border: 3px solid red; */
+    background: rgb(0, 0, 0);
     height: 630px;
     color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    clip-path: polygon(50% 0, 100% 0, 100% 60%, 100% 100%, 48% 94%, 0 100%, 0 0);
 }
 
 .content {
     width: 50vw;
+    /* border: 3px solid blue; */
     margin-left: 15%;
     margin-top: 7%;
     position: relative;
@@ -99,6 +113,7 @@
 
 .image {
     width: 50vw;
+    /* border: 3px solid green; */
     position: relative;
     animation: image-slide 2s ease-in-out forwards;
 }
@@ -128,14 +143,42 @@
     height: 500px;
     background: linear-gradient(to right, rgb(249, 126, 131), rgb(225, 54, 144));
     border-radius: 50%;
+    /* border: 30px soild yellow; */
     margin-top: 100px;
+    transform: scale(0);
+    animation-name: circle-slide;
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
 }
 
+@keyframes circle-slide {
+    from {
+        transform: scale(0);
+
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* CSS for landing page section ends here */
+
+/* CSS for learning section Starts here */
+
+.Learning {
+    background: #E23890;
+    background: linear-gradient(87deg, rgba(226, 56, 144, 1) 13%, rgba(246, 117, 132, 1) 55%);
+}
 
 @media screen and (max-width:980px) {
     .nav-items {
         display: none;
     }
+
     .hamburger {
         display: block;
     }
@@ -161,9 +204,50 @@
 }
 
 @media screen and (max-width: 980px) {
-    .main {
+    .landing-page-section {
         flex-direction: column;
         align-items: center;
         height: 1026px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 95%, 0 100%, 0% 50%);
     }
 }
+
+@media screen and (max-width: 450px) {
+    .landing-page-section {
+        /* flex-direction: column; */
+        align-items: center;
+        width: auto;
+        /* border: 3pxsolid red; */
+        /* height: 1026px; */
+        clip-path: polygon(50% 0, 100% 0, 100% 60%, 100% 100%, 46% 98%, 0 100%, 0 0);
+
+        .content {
+            width: 380px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .content button {
+            margin:
+        }
+
+        .image {
+            width: 420px;
+            margin-right: 50px;
+            /* background-size: cover; */
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            margin-left: 10px;
+            /* border: 3px solid blue; */
+        }
+
+        .image .round {
+            /* border: 3px solid goldenrod; */
+            height: 400px;
+            width: 400px;
+            margin-left: 38px;
+        }
+    }
