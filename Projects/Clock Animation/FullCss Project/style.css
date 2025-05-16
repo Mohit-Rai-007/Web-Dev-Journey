@@ -68,7 +68,7 @@ body {
     height: 630px;
     color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    clip-path: polygon(50% 0, 100% 0, 100% 60%, 100% 100%, 48% 94%, 0 100%, 0 0);
+    clip-path: polygon(50% 0, 100% 0, 100% 60%, 100% 100%, 50% 94%, 0 100%, 0 0);
 }
 
 .content {
@@ -183,8 +183,8 @@ body {
     /* background: #E23890;
     background: linear-gradient(87deg, rgba(226, 56, 144, 1) 13%, rgba(246, 117, 132, 1) 55%); */
     background-image: linear-gradient(to right, #e13690, #f97e83);
-
-
+    /* clip-path: polygon(50% 0, 100% 0, 100% 60%, 100% 100%, 48% 94%, 0 100%, 0 0); */
+    /* border: 5px solid white; */
 }
 
 .heading-part {
@@ -241,7 +241,7 @@ body {
 .heading-part {
     opacity: 0;
     animation-name: text-animation;
-    animation-delay: 3s;
+    animation-delay: 2s;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -264,7 +264,7 @@ body {
     /* transform: translateX(-100%); */
     opacity: 0;
     animation-name: box1-slide;
-    animation-delay: 3s;
+    animation-delay: 2s;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -328,7 +328,51 @@ body {
     }
 }
 
+.Pathway {
+    background-color: black;
+    /* border: 4px solid blue; */
+    clip-path: polygon(50% 8%, 100% 0, 100% 63%, 100% 100%, 0 100%, 0 60%, 0 0);
+}
 
+.text-part h2 {
+    color: white;
+    text-align: center;
+    font-size: 64px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    padding-top: 80px;
+    /* border: 3px solid red; */
+}
+
+.pathway-card {
+    border-radius: 20px;
+}
+
+.card-part{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+#card1 {
+    background-image: url("https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/6a30d53b14a551b9a027229a/sdsd.jpg");
+    height: 531px;
+    width: 346px;
+    background-size: cover;
+}
+#card2 {
+    background-image: url("https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/d3dbe8176ae2547f93db7651/ww.jpg");
+    height: 531px;
+    width: 346px;
+    background-size: cover;
+}
+#card3 {
+    background-image: url("https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/8ed7181ea87f5edfabf0776a/qq.jpg");
+    height: 531px;
+    width: 346px;
+    background-size: cover;
+}
 @media screen and (max-width:980px) {
     .nav-items {
         display: none;
@@ -365,6 +409,9 @@ body {
         height: 1026px;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 95%, 0 100%, 0% 50%);
     }
+    .Pathway {
+        clip-path: polygon(48% 8%, 100% 0, 100% 63%, 100% 100%, 0 100%, 0 60%, 0 0);
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -374,7 +421,7 @@ body {
         width: auto;
         /* border: 3pxsolid red; */
         /* height: 1026px; */
-        clip-path: polygon(50% 0, 100% 0, 100% 60%, 100% 100%, 46% 98%, 0 100%, 0 0);
+        clip-path: polygon(50% 0, 100% 0, 100% 60%, 100% 100%, 50% 98%, 0 100%, 0 0);
     }
 
     .content {
@@ -413,15 +460,19 @@ body {
     }
 
     .grid-part {
-        /* border: 3px solid green; */
-        /* display: grid; */
-        /* grid-template-columns: repeat(auto-fit, 300px); */
         row-gap: 0%;
-
-        /* column-gap: 150px; */
         justify-content: center;
         justify-items: center;
+    }
 
+    .Pathway {
+        clip-path: polygon(48% 2%, 100% 0, 100% 63%, 100% 100%, 0 100%, 0 60%, 0 0);
+    }
+    .Pathway .text-part h2 {
+        font-size: 32px;
+    }
 
+    .Pathway .card-part {
+        flex-wrap: wrap;
     }
 }
