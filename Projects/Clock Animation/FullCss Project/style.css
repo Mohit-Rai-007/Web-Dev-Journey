@@ -4,8 +4,10 @@
     box-sizing: border-box;
 }
 body{
-    background: #E23890;
-    background: linear-gradient(87deg, rgba(226, 56, 144, 1) 13%, rgba(246, 117, 132, 1) 55%);
+    /* background: #E23890;
+    background: linear-gradient(87deg, rgba(226, 56, 144, 1) 13%, rgba(246, 117, 132, 1) 55%); */
+    background-image: linear-gradient(to right, #e13690, #f97e83);
+
 }
 .header {
     display: flex;
@@ -144,9 +146,11 @@ body{
 .round {
     width: 500px;
     height: 500px;
-    background: linear-gradient(to right, rgb(249, 126, 131), rgb(225, 54, 144));
+    /* background: linear-gradient(to right, rgb(249, 126, 131), rgb(225, 54, 144)); */
     border-radius: 50%;
+    background-image: url(https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/22e81c593339560aa8499637/jj.jpg);
     /* border: 30px soild yellow; */
+    background-size: cover;
     margin-top: 100px;
     transform: scale(0);
     animation-name: circle-slide;
@@ -174,8 +178,10 @@ body{
 
 .Learning {
     /* border: 3px solid red; */
-    background: #E23890;
-    background: linear-gradient(87deg, rgba(226, 56, 144, 1) 13%, rgba(246, 117, 132, 1) 55%);
+    /* background: #E23890;
+    background: linear-gradient(87deg, rgba(226, 56, 144, 1) 13%, rgba(246, 117, 132, 1) 55%); */
+    background-image: linear-gradient(to right, #e13690, #f97e83);
+
 
 }
 
@@ -222,12 +228,32 @@ body{
 }
 .box p{
     margin-top: 20px;
+    font-style: italic;
 }
-
+.heading-part{
+    opacity: 0;
+   animation-name: text-animation;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+@keyframes text-animation {
+    from{
+        transform: scale3d(0);
+        opacity: 0;
+    }
+    to{
+        transform: scale3d(1);
+        opacity: 1;
+    }
+}
 #box1{
-    /* transform: (0); */
+    /* transform: translateX(-100%); */
+    opacity: 0;
    animation-name: box1-slide;
-    animation-delay: 2s;
+    animation-delay: 3s;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -247,7 +273,7 @@ body{
 #box2{
     transform: scale(0);
    animation-name: box2-slide;
-    animation-delay: 2s;
+    animation-delay: 3s;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -265,8 +291,10 @@ body{
 }
 
 #box3{
+    /* transform: translateX(100%); */
+    opacity: 0;
    animation-name: box3-slide;
-    animation-delay: 2s;
+    animation-delay: 3s;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
