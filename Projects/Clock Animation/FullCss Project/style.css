@@ -10,6 +10,11 @@ body {
     background-image: linear-gradient(to right, #e13690, #f97e83);
 
 }
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
 
 .header {
     display: flex;
@@ -36,6 +41,13 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 40vw;
     text-decoration: none;
+    /* transition: all 0.3s ease-in-out; */
+}
+.nav-items li{
+    transition: all 0.3s ease-in-out;
+}
+li:hover{
+    transform: translateY(-10%);
 }
 
 .hamburger {
@@ -116,6 +128,11 @@ body {
     border-radius: 30px;
     letter-spacing: 2px;
     margin-top: 50px;
+    /* border: 3px solid green; */
+    transition: all 0.3s ease-in-out;
+}
+button:hover{
+    transform: translateY(-10%);
 }
 
 .image {
@@ -161,7 +178,9 @@ body {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
 }
+
 
 @keyframes circle-slide {
     from {
