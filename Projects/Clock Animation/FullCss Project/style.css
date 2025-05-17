@@ -346,6 +346,29 @@ body {
 
 .pathway-card {
     border-radius: 20px;
+    padding: 25px;
+    position: relative;
+}
+.pathway-card h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.pathway-card p {
+    font-size: 16px;
+    margin-top: 70%;
+    /* border: 3px solid red; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+}
+
+.pathway-card img {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 85%;
+    left: 80%;
 }
 
 .card-part{
@@ -373,6 +396,65 @@ body {
     width: 346px;
     background-size: cover;
 }
+
+#card1 {
+    transform: translateX(120%);
+    animation-name: pathway-card1-slide;
+    animation-delay: 4s;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+ @keyframes pathway-card1-slide {
+    from{
+        transform:translateX(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+ }
+ #card2 {
+    transform: translateX(-120%);
+    animation-name: pathway-card2-slide;
+    animation-delay: 4s;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+ @keyframes pathway-card2-slide {
+    from{
+        transform:translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+ }
+ #card3 {
+    transform: translateX(120%);
+    animation-name: pathway-card3-slide;
+    animation-delay: 4s;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+ @keyframes pathway-card3-slide {
+    from{
+        transform:translateX(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+ }
+
 @media screen and (max-width:980px) {
     .nav-items {
         display: none;
