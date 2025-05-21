@@ -704,7 +704,7 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(3, calc(30% - 20px));
     row-gap: 1%;
-    
+
     column-gap: -24;
     justify-content: center;
     justify-items: center;
@@ -922,15 +922,44 @@ button:hover {
     .online .online-text-part h2 {
         font-size: 31px;
     }
-    .six-box {
-    display: grid;
-    grid-template-columns: repeat(3, calc(30% - 20px));
-    row-gap: 1%;
-    flex-wrap: wrap;
-    
-    column-gap: -24;
-    justify-content: center;
-    justify-items: center;
-    padding: 100px;
 }
+
+@media screen and (max-width: 450px) {
+    .last-part {
+        background-position: center;
+        /* padding: 20px 0; */
+    }
+    
+    .six-box {
+        grid-template-columns: 1fr;
+        padding: 30px 15px;
+        row-gap: 20px;
+    }
+    
+    .six-box .dabba {
+        height: auto;
+        width: 90%;
+        max-width: 300px;
+        padding: 25px 15px;
+    }
+    
+    .last-part .button-part button {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 140px;
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    .last-part .button-part p {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 15px;
+        padding-bottom: 30px;
+    }
+    
+    .dabba .u-svg-content {
+        margin-top: 20px;
+    }
 }
