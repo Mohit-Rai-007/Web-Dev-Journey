@@ -703,7 +703,7 @@ button:hover {
 .six-box {
     display: grid;
     grid-template-columns: repeat(3, calc(30% - 20px));
-    row-gap: 1%;
+    row-gap: 2%;
 
     column-gap: -24;
     justify-content: center;
@@ -720,6 +720,10 @@ button:hover {
     /* border: 4px solid blue; */
     padding: 40px;
     text-align: center;
+    transition: transform 0.5s ease-in-out;
+}
+.dabba:hover{
+    transform: translateY(-2%);
 }
 
 .last-part .button-part button {
