@@ -759,13 +759,18 @@ button:hover {
     margin-top: 30px;
 }
 
+.bolchaal{
+    background-color: white;
+}
+
 .contact-section {
     display: flex;
     background-color: white;
     justify-content: center;
     padding-top: 100px;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
 .contact-section .left {
@@ -851,6 +856,17 @@ label {
     border: none;
     font-size: 20px;
     font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer {
+    width: 100vw;
+    height: 30vh;
+    background-color: #333333;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding-top: 70px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
