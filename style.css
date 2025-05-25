@@ -722,7 +722,8 @@ button:hover {
     text-align: center;
     transition: transform 0.5s ease-in-out;
 }
-.dabba:hover{
+
+.dabba:hover {
     transform: translateY(-2%);
 }
 
@@ -756,6 +757,101 @@ button:hover {
     height: 35px;
     fill: #F97E83;
     margin-top: 30px;
+}
+
+.contact-section {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    padding-top: 100px;
+    margin-bottom: 100px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.contact-section .left {
+    background: linear-gradient(rgb(225, 54, 144), rgb(249, 126, 131));
+    padding: 50px;
+    line-height: 40px;
+    color: white;
+}
+
+.contact-section .box {
+    width: 600px;
+    height: 800px;
+    /* border: 2px solid black; */
+}
+
+.contact-section .box h1 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.contact-section .box h3 {
+    font-size: 27px;
+    font-weight: 500;
+}
+
+.contact-section .box p {
+    font-style: unset;
+}
+
+.contact-section .box .line {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.contact-section .right {
+    color: black;
+    padding: 30px;
+    box-shadow: 1px 1px 5px 2px #dddcdc;
+}
+
+.contact-section .right p {
+    color: black;
+    margin-bottom: 50px;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.contact-section input {
+    width: 100%;
+    border: none;
+    padding: 20px;
+    margin-top: 20px;
+    border-bottom: 1px solid;
+    margin-bottom: 30px;
+}
+
+.contact-section textarea {
+    width: 100%;
+    padding: 30px;
+    border: none;
+    text-decoration: underline;
+    margin-top: 20px;
+    border-bottom: 1px solid;
+}
+
+.contact-section input::placeholder {
+    font-size: 18px;
+}
+
+.contact-section .right button {
+    width: 100%;
+    padding: 17px;
+    border-radius: 30px;
+    background: #e13690;
+    margin-top: 50px;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* CSS for last part starts here */
@@ -933,20 +1029,20 @@ button:hover {
         background-position: center;
         /* padding: 20px 0; */
     }
-    
+
     .six-box {
         grid-template-columns: 1fr;
         padding: 30px 15px;
         row-gap: 20px;
     }
-    
+
     .six-box .dabba {
         height: auto;
         width: 90%;
         max-width: 300px;
         padding: 25px 15px;
     }
-    
+
     .last-part .button-part button {
         margin-left: auto;
         margin-right: auto;
@@ -955,15 +1051,24 @@ button:hover {
         font-size: 16px;
         padding: 15px;
     }
-    
+
     .last-part .button-part p {
         margin-left: 0;
         text-align: center;
         margin-top: 15px;
         padding-bottom: 30px;
     }
-    
+
     .dabba .u-svg-content {
         margin-top: 20px;
+    }
+
+    .contact-section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contact-section .box {
+        width: 360px;
     }
 }
