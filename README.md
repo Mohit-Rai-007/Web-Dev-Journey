@@ -33,7 +33,7 @@ The site is fully mobile responsive and deployed using:
 |--------------|-------------|
 | ![Desktop Screenshot](resources/screenshots/Desktop_view.png) | ![Mobile Screenshot](resources/screenshots/Mobile_view.png) |
 
-> 💡 Add more screenshots as needed in the `resources/screenshots/` folder.
+
 
 ## 🎯 Goals
 
