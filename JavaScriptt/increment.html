@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="increase">0</h1>
+    <button id="btn">Click Here To increase the number</button>
+    <script>
+        let count=0
+        let increment=document.getElementById("btn")
+        
+        increment.onclick = function() {
+            count++;
+            document.getElementById("increase").textContent = count
+        }
+    </script>
+</body>
+</html>

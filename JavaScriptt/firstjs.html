@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            /* border: 2px solid red; */
+            width: 25%;
+            height: 200px;
+            /* box-shadow: 3px 3px 3px 3px black; */
+        }
+        .heading{
+            display: flex;
+            justify-content: center;
+        }
+        .buttons{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .buttons button{
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1 id="toupdate">
+                0
+            </h1>
+        </div>
+        <div class="buttons">
+            <button id="increment">Increment</button>
+            <button id="decrement">Decrement</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+    <script src="firstjs.js">
+
+    </script>
+</body>
+
+</html>
