@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circumference of Circle</title>
+    <style>
+        .container{
+            border: 3px solid black;
+            width: 50%;
+            height: 150px;
+            padding: 50px;
+            margin: auto;
+            border-radius: 10px;
+        }
+        .container input{
+            border: 3px solid red;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .container button{
+            padding: 10px;
+            background-color: green;
+            background: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Circumference of Circle calculator</h1>
+        <input type="text" id="radius" placeholder="Enter Radius">
+        <button id="Calculate">Calculate</button>
+        <h2 id="update"></h2>
+    </div>
+
+    <script>
+        document.getElementById("Calculate").onclick  = function(){
+            let radius = document.getElementById("radius").value
+            let circumference= 2*3.14*radius;
+            document.getElementById("update").textContent = "The Circumference Of the Circle Is: " +circumference
+        }
+    </script>
+</body>
+</html>
