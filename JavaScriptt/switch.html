@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <h3>Enter Number 1:</h3>
+        <input type="text" id="num1">
+        <h3>Enter Number 2:</h3>
+        <input type="text" id="num2">
+        <h3>Select the Operator:</h3>
+        <select name="" id="operations">
+            <option value="+">SELECT</option>
+            <option value="+">Addition</option>
+            <option value="-">Subtraction</option>
+            <option value="*">Multiplication</option>
+            <option value="%">Remainder</option>
+        </select>
+        <button id="letsgo">CALCULATE</button>
+        <h3 id="result"></h3>
+    </div>
+
+    <script>
+
+        document.getElementById("letsgo").onclick = function () {
+            let num1 = parseInt(document.getElementById("num1").value)
+            let num2 = parseInt(document.getElementById("num2").value)
+            let operation = document.getElementById("operations").value
+            let result = document.getElementById("result")
+            // console.log(operation)
+
+            switch (operation) {
+                case "+":
+                    let sum = num1 + num2
+                    result.textContent = "Addition of both the number is: " + sum
+                    break;
+
+                case "-":
+                    let sub= num1 - num2 
+                    result.textContent = "Subtraction of both the number is: "+ sub
+                    break;
+
+                case "*":
+                    let multiply = num1 * num2
+                    result.textContent = "Multiplication of both the number is: "+ multiply
+                    break;
+
+                case "%":
+                    let mod = num1 % num2
+                    result.textContent = "Remainder of both the number is: "+mod
+                    break;
+
+                default:
+                    alert("Invalid")
+                    break;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
