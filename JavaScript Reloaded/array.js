@@ -41,3 +41,23 @@ for(let i=0;i<marks.length;i++)
     }
 }
 console.log(marks);
+
+
+// We have to convert the items in the array into uppercase.
+
+// names.forEach(name=>{names[name].toUpperCase();})
+// console.log(names);
+
+let names=["Hasan","Dhruv", "Mohit","HareRam"]
+for (let i = 0; i < names.length; i++) {
+    names[i]=names[i].toUpperCase()
+    
+}
+console.log(names);
+
+// Using MAP FUNCTIONS
+
+const upperNames = names.map(name => name.toUpperCase());
+
+console.log(upperNames); 
+
