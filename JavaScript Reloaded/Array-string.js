@@ -42,10 +42,28 @@ let max = 0
 for (let i = 0; i < longest_lst.length; i++) {
     
     if (longest_lst[i].length > max) {
-        max = longest_lst[i].length
+        
         longest_word = longest_lst[i]
     }
 
 }
 console.log(longest_word);
+
+
+// ONLY UNIQUE ELEMENTS-->
+
+let s = "This is javascript class class class is is class"
+let s_lst= s.split(" ")
+let result = []
+
+for (let i = 0; i < s_lst.length; i++) {
+    
+    if (result.includes(s_lst[i])) {
+        continue
+    } else {
+        result.push(s_lst[i])
+    }
+    
+}
+console.log(result.join(" "));
 
