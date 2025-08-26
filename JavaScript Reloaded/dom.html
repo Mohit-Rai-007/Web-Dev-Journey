@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+  
+    <input type="text" id="task" placeholder="Enter the task">
+    <button onclick="add()">Add task</button>
+
+    <ul id="Container"></ul>
+
+
+
+
+
+    <script>
+        function add()
+        {
+            let t=document.getElementById('task').value;
+            if(t.trim()==="") 
+            {
+                alert("No spaces allowed");
+            }                    
+
+            let li=document.createElement("li");
+            li.innerText=t;
+
+            let ul=document.getElementById("Container");
+            ul.appendChild(li);
+
+
+            let removeBtn=document.createElement("button");
+            removeBtn.style.marginLeft="10px";
+            removeBtn.innerText="❌";
+            removeBtn.onclick=function()
+            {
+             li.remove()   
+            }
+
+            li.appendChild(removeBtn);
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>

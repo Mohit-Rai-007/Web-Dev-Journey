@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Manager</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎓 Student Data Manager</h1>
+        </div>
+        
+        <div class="form-section">
+            <div class="input-group">
+                <div class="input-field">
+                    <input type="text" placeholder="Enter student name" id="name">
+                </div>
+                <div class="input-field">
+                    <input type="number" placeholder="Enter age" id="age" min="1" max="100">
+                </div>
+                <div class="input-field">
+                    <input type="number" placeholder="Enter marks" id="marks" min="0" max="100">
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <button class="add-btn" onclick="addStudent()">Add Student</button>
+            </div>
+        </div>
+
+        <div class="table-section">
+            <div class="table-container">
+                <table id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>👤 Name</th>
+                            <th>🎂 Age</th>
+                            <th>📊 Marks</th>
+                            <th>⚡ Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr class="empty-state">
+                            <td colspan="4">
+                                <div class="icon">📝</div>
+                                <div>No students added yet. Add your first student above!</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addStudent() {
+            let name = document.getElementById("name").value.trim();
+            let age = document.getElementById("age").value.trim();
+            let marks = document.getElementById("marks").value.trim();
+            
+            if (!marks || !age || !name) {
+                // Add shake animation for invalid input
+                const inputs = document.querySelectorAll('input');
+                inputs.forEach(input => {
+                    if (!input.value.trim()) {
+                        input.style.animation = 'shake 0.5s ease-in-out';
+                        setTimeout(() => input.style.animation = '', 500);
+                    }
+                });
+                return;
+            }
+            
+            let table = document.getElementById("tableBody");
+            
+            // Remove empty state if it exists
+            const emptyState = table.querySelector('.empty-state');
+            if (emptyState) {
+                emptyState.remove();
+            }
+            
+            let row = document.createElement("tr");
+            row.className = "fade-in";
+            row.innerHTML = `
+                <td>${name}</td>
+                <td>${age}</td>
+                <td>${marks}</td>
+                <td><button class="delete-btn" onclick="deleteRow(this)">🗑️</button></td>
+            `;
+            table.appendChild(row);
+            
+            // Clear inputs
+            document.getElementById("name").value = "";
+            document.getElementById("age").value = "";
+            document.getElementById("marks").value = "";
+            
+            // Focus on name input for next entry
+            document.getElementById("name").focus();
+        }
+        
+        function deleteRow(button) {
+            const row = button.parentElement.parentElement;
+            row.style.animation = 'fadeOut 0.3s ease-out';
+            setTimeout(() => {
+                row.remove();
+                
+                // Add empty state if no rows left
+                const tableBody = document.getElementById("tableBody");
+                if (tableBody.children.length === 0) {
+                    const emptyRow = document.createElement("tr");
+                    emptyRow.className = "empty-state";
+                    emptyRow.innerHTML = `
+                        <td colspan="4">
+                            <div class="icon">📝</div>
+                            <div>No students added yet. Add your first student above!</div>
+                        </td>
+                    `;
+                    tableBody.appendChild(emptyRow);
+                }
+            }, 300);
+        }
+        
+        // Add Enter key support
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                addStudent();
+            }
+        });
+        
+        // Add shake animation for invalid inputs
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                25% { transform: translateX(-5px); }
+                75% { transform: translateX(5px); }
+            }
+            @keyframes fadeOut {
+                from { opacity: 1; transform: scale(1); }
+                to { opacity: 0; transform: scale(0.8); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
